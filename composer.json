@@ -1,0 +1,42 @@
+{
+    "name": "datitisev/flarum-discussion-agree-message",
+    "description": "Make users agree to terms when creating a discussion.",
+    "keywords": [
+        "flarum"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "funding": [
+        {
+            "type": "github",
+            "url": "https://github.com/sponsors/datitisev"
+        }
+    ],
+    "authors": [
+        {
+            "name": "David Sevilla Martin",
+            "email": "me@datitisev.me",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "flarum/core": "^1.0.0",
+        "fof/extend": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "FoF\\DiscussionAgreeMessage\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Discussion Agree Message",
+            "category": "",
+            "icon": {
+                "name": "fas fa-clipboard-check",
+                "backgroundColor": "#363537",
+                "color": "#0cce6b"
+            }
+        }
+    }
+}

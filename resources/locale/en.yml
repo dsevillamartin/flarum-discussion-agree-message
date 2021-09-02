@@ -1,0 +1,8 @@
+datitisev-discussion-agree-message:
+  # For more details on the format
+  # Checkout https://docs.flarum.org/extend/i18n.html#appendix-a-standard-key-format
+  admin:
+    settings:
+      title_label: Title
+      description_label: Description
+      agreement_label: Agreement Text
