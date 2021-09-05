@@ -23,5 +23,10 @@ app.initializers.add('datitisev/flarum-discussion-agree-message', () => {
       label: app.translator.trans(`${PREFIX}.admin.settings.agreement_label`),
       setting: `${PREFIX}.agreement`,
       type: 'text',
+    })
+    .registerSetting({
+      label: app.translator.trans(`${PREFIX}.admin.settings.disable_inputs_label`),
+      setting: `${PREFIX}.disable-inputs`,
+      type: 'boolean',
     });
 });

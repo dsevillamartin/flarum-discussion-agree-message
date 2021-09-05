@@ -25,7 +25,7 @@ return [
 
     (new ExtensionSettings())
         ->setPrefix('datitisev-discussion-agree-message.')
-        ->addKeys(['title', 'description', 'agreement']),
+        ->addKeys(['title', 'description', 'agreement', 'disable-inputs']),
 
     (new Extend\Event())
         ->listen(Discussion\Event\Saving::class, Listeners\ValidateAgreementCheck::class),

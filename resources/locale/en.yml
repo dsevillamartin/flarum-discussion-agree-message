@@ -6,3 +6,5 @@ datitisev-discussion-agree-message:
       title_label: Title
       description_label: Description
       agreement_label: Agreement Text
+
+      disable_inputs_label: Disable discussion title & content inputs while agreement is not checked.
