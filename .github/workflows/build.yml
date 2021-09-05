@@ -3,7 +3,7 @@ name: JavaScript
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build:
@@ -14,13 +14,17 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v2
 
+      - name: Get yarn cache directory
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+
       - name: Restore npm cache
         uses: actions/cache@v2
         with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('js/package-lock.json') }}
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
-            ${{ runner.os }}-node-
+            ${{ runner.os }}-yarn-
 
       # Our action will install npm, cd into `./js`, run `npm run build` and
       # `npm run build-typings`, then commit and upload any changes
